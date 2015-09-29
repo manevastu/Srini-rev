@@ -11,7 +11,6 @@ class rpn {
 		int nt = Integer.parseInt(input.nextLine());
 		ArrayList<Integer> out=new ArrayList<Integer>();
 		String[] rpnArr = new String[nt];
-		int k=0;
 		for(int i=0; i<nt; i++){
 			String value = input.nextLine();
 			String[] charList = value.split("");
@@ -46,8 +45,7 @@ class rpn {
 			for (int l=0; l<rpnStack.size(); l++){
 				temp += rpnStack.get(l);
 			}
-			rpnArr[k] = temp;
-			k = k+1;
+			rpnArr[i] = temp;
 		}
 		for(int q=0; q<rpnArr.length; q++){			
 			System.out.println(rpnArr[q]);
